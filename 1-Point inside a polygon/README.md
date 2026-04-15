@@ -1,6 +1,6 @@
 # Point inside a polygon
 Santiago Lillo Macías
-2026-03-28
+2026-04-16
 
 This second file consists in determining wether or not a point is inside a polygon. We import the `Punto` (point) class used on the previous folder, and the other basic functions.
 
