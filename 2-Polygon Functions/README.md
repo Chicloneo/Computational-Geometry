@@ -4,7 +4,7 @@ Santiago Lillo Macías
 
 # Tangent lines
 
-The first part of this file consists in: given a polygon and a point Q outside of that polygon, to determine the tangent lines to the polygon from Q. The polygon is a `list` of `Punto` objects. 
+The first part of this file consists in: given a polygon and a point Q outside of that polygon, to determine the tangent lines from Q to the polygon. The polygon is a `list` of `Punto` objects. 
 
 ![A basic situation](Figure_1.png)
 
