@@ -61,8 +61,106 @@ def punto_en_poligono(q: Punto, pol: list[Punto]) -> bool:
         return False
 ```
 
+# Test functions
+
+Ignore
+
+```{python}
+def comprueba_segmentos_se_cortan(s = None, t = None, size = 2, entero = False):
+    def punto_aleatorio():
+        if entero:
+            return Punto(random.randint(0, size), random.randint(0, size))
+        else:
+            return Punto(random.uniform(0, size), random.uniform(0, size))
+    if s is None:
+        s = [punto_aleatorio(), punto_aleatorio()]
+    if t is None:
+        t = [punto_aleatorio(), punto_aleatorio()]
+    respuesta = segmentos_se_cortan(s, t)
+    plt.plot([p.x for p in s], [p.y for p in s], 'blue')
+    plt.plot([p.x for p in t], [p.y for p in t], 'red')
+    texto = 'Sí se cortan' if respuesta else 'NO se cortan'
+    texto = 'Los segmentos ' + texto
+    plt.title(texto)
+    plt.show()
+    return
+
+def comprueba_punto_en_poligono(q = None, pol = None, n_vertices = 12):
+    def intersects(p1, p2, p3, p4):
+        """Check if line segment (p1,p2) intersects with (p3,p4)."""
+        def ccw(A, B, C):
+            return (C[1]-A[1]) * (B[0]-A[0]) > (B[1]-A[1]) * (C[0]-A[0])
+        
+        # Standard line intersection formula
+        return ccw(p1, p3, p4) != ccw(p2, p3, p4) and ccw(p1, p2, p3) != ccw(p1, p2, p4)
+
+    def generate_random_polygon(n):
+        # 1. Create random points
+        points = np.random.rand(n, 2)
+        
+        # 2. The "Untangling" loop
+        swapped = True
+        while swapped:
+            swapped = False
+            for i in range(n):
+                for j in range(i + 2, n):
+                    # Don't check adjacent edges (they share a vertex)
+                    if i == 0 and j == n - 1: continue
+                    
+                    # Define the four points of the two edges we are checking
+                    p1, p2 = points[i], points[(i + 1) % n]
+                    p3, p4 = points[j], points[(j + 1) % n]
+                    
+                    if intersects(p1, p2, p3, p4):
+                        # 3. Swap the order of points between i+1 and j to uncross
+                        points[i+1:j+1] = points[i+1:j+1][::-1]
+                        swapped = True
+        return points
+
+    # --- Plotting ---
+    if pol is None:
+        poly_points = generate_random_polygon(n_vertices)
+    else:
+        poly_points = np.array([[p.x, p.y] for p in pol])
+    # Close the polygon for plotting
+    plot_data = np.vstack([poly_points, poly_points[0]])
+
+    plt.figure(figsize=(6,6))
+    plt.plot(plot_data[:,0], plot_data[:,1], 'ro-')
+    plt.fill(plot_data[:,0], plot_data[:,1], alpha=0.2, color='blue')
+    
+    if q is None: q = Punto(random.uniform(0,1), random.uniform(0,1))
+    plt.plot(q.x, q.y, 'bo')
+    pol = [Punto(*row) for row in poly_points]
+    respuesta = punto_en_poligono(q, pol)
+    texto = 'dentro' if respuesta else 'fuera'
+    texto = 'El punto está ' + texto
+    plt.title(texto)
+    plt.show()
+```
+
 # Examples
+
+```{text}
+comprueba_segmentos_se_cortan()
+```
 
 ![NO example](Figure_2.png)
 
+```{text}
+comprueba_segmentos_se_cortan()
+```
+
 ![YES example](Figure_3.png)
+
+```{text}
+comprueba_punto_en_poligono()
+```
+
+![Outside example](Figure_4.png)
+
+```{text}
+comprueba_punto_en_poligono()
+```
+
+![Inside example](Figure_5.png)
