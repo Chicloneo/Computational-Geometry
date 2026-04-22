@@ -1,11 +1,3 @@
-"""PRACTICA 3: 11-02-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p1.py)
-- Trabaja en las funciones "interseca_segmentos" (línea 85), "tangentes_exteriores" (línea 93)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-"""
-
 import random
 import math
 import numpy as np
