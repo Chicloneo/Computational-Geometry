@@ -1,14 +1,3 @@
-"""PRACTICA 0: 21-01-2026
-Santiago Lillo Macías
-Suponemos que estamos en R2
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p0.py)
-- Trabaja en las funciones "alineados" (línea 25), "ordena_angularmente" (línea 29)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-
-Actualizada a 02-02-2026
-"""
 import random
 import math
 import matplotlib.pyplot as plt
