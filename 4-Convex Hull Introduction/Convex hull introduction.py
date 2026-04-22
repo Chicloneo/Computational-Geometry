@@ -1,14 +1,3 @@
-#Entrego esta práctica con retraso, porque falté el día de la práctica 4 debido a falta justificada.
-
-"""PRACTICA 4: 18-02-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p4.py)
-- Obtén la función envolvente_convexa_IA preguntando a una IA (línea 95)
-- Trabaja en las funciones "rodea_la_finca", "arbol_caido"
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-"""
-
 import random
 import math
 #import numpy as np
