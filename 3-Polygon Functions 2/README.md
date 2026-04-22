@@ -7,6 +7,7 @@ Santiago Lillo Macías
 Remember we had define the function `segmentos_se_cortan` in the previous project. It told us (Yes/No) if two segments intersect. But now we want to know more about that intersection. Is it a point? Another segment? Is it empty? We consider a segment to be a list of two `Punto` objects.
 
 -Input: two segments.
+
 -Output: None/`Punto`/Segment
 
 We divide into cases:
@@ -134,6 +135,7 @@ Given two polygons (list of `Punto`s), determine the two common external tangent
 ## Code
 
 -Input: two convex polygons, positive oriented.
+
 -Output: list with four `Punto`s. Two for a tangent line, and two for the other one.
 
 Idea for upper tangent (lower is analogous): start with any two points you want, $[p,q]$. I've selected the first of each list. First, iterate through the polygon 1. If any point $p'$ is at the left of the tangent $[p,q]$, then change it to $[p',q]$. Then do the same for polygon 2. It is highly probable that when you enter the second loop `for` and change a point, the previous point selected from polygon 1 is not the appropriate one. Thus, repeat this until no change has been made.
