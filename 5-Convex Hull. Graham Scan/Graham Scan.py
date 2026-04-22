@@ -1,12 +1,3 @@
-"""PRACTICA 5: 25-02-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p5.py)
-- Trabaja en la función envolvente_convexa (línea 95)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-- Termina la práctica en casa durante los próximos días y súbela al CV
-"""
-
 import random
 import math
 import numpy as np
