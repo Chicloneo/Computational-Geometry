@@ -1,11 +1,3 @@
-"""PRACTICA 2: 04-02-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p1.py)
-- Trabaja en las funciones "puntos_tangencia_poligono" (línea 67), "es_poligono" (línea 75)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-"""
-
 import random
 import math
 import numpy as np
