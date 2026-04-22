@@ -1,12 +1,3 @@
-"""PRACTICA 1: 28-01-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p1.py)
-- Trabaja en las funciones "segmentos_se_cortan" (línea 44), "punto_en_poligono" (línea 49)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-Actualizada 03/02/26
-"""
-
 import random
 import math
 import numpy as np
