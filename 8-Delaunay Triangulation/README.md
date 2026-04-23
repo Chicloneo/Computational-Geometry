@@ -1,4 +1,4 @@
-# Delunay triangulation
+# Delaunay triangulation
 
 Santiago Lillo Macías
 2026-04-23
@@ -15,9 +15,9 @@ determine its triangulation. A point cloud can be triangulated in several ways.
 
 There are diferent kinds of triangulation methods: Incremental, Graham, Divide and Conquer,... Here we present a brute-foce search algorithm, easier to understand. The complexity is $O(n^4)$, but we won't care about it for now. 
 
-It is known that a unique circumference passes through 3 points (not alligned). If you hae the point cloud, you could arbitrarily choose 3 points. If you are lucky, no other point falls inside the circle. Then, the triangle defined by those three points is an OK _Delunay Triangle_. But if your are not so lucky, some points could fall inside the circle. This triangle is not a Delunay triangle.
+It is known that a unique circumference passes through 3 points (not alligned). If you hae the point cloud, you could arbitrarily choose 3 points. If you are lucky, no other point falls inside the circle. Then, the triangle defined by those three points is an OK _Delaunay Triangle_. But if your are not so lucky, some points could fall inside the circle. This triangle is not a Delaunay triangle.
 
-![Delunay](Images/Figure_8.png)
+![Delaunay](Images/Figure_8.png)
 
 ## Algorithm
 
@@ -48,9 +48,9 @@ __Remarks__
 
 -$j = i+1,...,n$ and $k=j+1,...,n$. By this way, every $(i,j,k)$ triplet is different. We can't do $l=k+1,...,n$ because we have to check _every_ point. Nevertheless, we still must check $l$ is different from $i,j$ or $k$ (this is a "concyclic" points issue). 
 
--`posible_triangulo` is a potential OK Delunay Triangle $(i,j,k)$.
+-`posible_triangulo` is a potential OK Delaunay Triangle $(i,j,k)$.
 
--`triangulo_valido` is a boolean variable. If _some_ point is inside the $(i,j,k)$-circle, then `triangulo_valido = False`, and we don't add it to the final triangle list. Otherwise, is every point is outside the $(i,j,k)$-circle, then it is an OK Delunay Triangle. `triangulo_valido` remains `True`. Note that we only add a triangle only when the boolean variable is `True`.
+-`triangulo_valido` is a boolean variable. If _some_ point is inside the $(i,j,k)$-circle, then `triangulo_valido = False`, and we don't add it to the final triangle list. Otherwise, is every point is outside the $(i,j,k)$-circle, then it is an OK Delaunay Triangle. `triangulo_valido` remains `True`. Note that we only add a triangle only when the boolean variable is `True`.
 
 ```{python}
 def triangulacion_delaunay_bruta(puntos):
@@ -159,11 +159,11 @@ def comprueba_triangulacion_nube(puntos):
 puntos = genera_nube_puntos(10, False)
 comprueba_triangulacion_nube(puntos)
 ```
-![Delunay](Images/Figure_6.png)
+![Delaunay](Images/Figure_6.png)
 
 ## Concyclic points
 
-But what aout concyclic points? That is, four or more points that lay on the same circumference -as we said before, three points are always concyclic.
+But what about concyclic points? That is, four or more points that lay on the same circumference -as we said before, three points are always concyclic.
 
 ![Concyclic](Images/Figure_4.png)
 
@@ -253,4 +253,4 @@ Punto(4, 6), Punto(18, 2), Punto(4, 12), Punto(14, 0), Punto(8, 4), Punto(5, 10)
 comprueba_triangulacion_nube(puntos)
 ```
 
-![Delunay](Images/Figure_7.png)
+![Delaunay](Images/Figure_7.png)
