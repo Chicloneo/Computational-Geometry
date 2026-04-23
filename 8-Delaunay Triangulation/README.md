@@ -9,7 +9,7 @@ Remember a _point cloud_ is a set of points on the plane. Now, given a point clo
 
 determine its triangulation. A point cloud can be triangulated in several ways.
 
-![Point cloud](Images/Figure_2.png)
+![Point cloud](Images/Figure.png)
 
 ## Brute force search
 
