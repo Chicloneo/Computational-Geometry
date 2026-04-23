@@ -9,8 +9,6 @@ Remember a _point cloud_ is a set of points on the plane. Now, given a point clo
 
 determine its triangulation. A point cloud can be triangulated in several ways.
 
-![Point cloud 2]([Images/Figure.png](https://github.com/Chicloneo/Computational-Geometry/blob/d0c53d36a76e4c6710d6b037e195f2c8d738121c/8-Delaunay%20Triangulation/Images/FIgure.png))
-
 <img width="599" height="307" alt="FIgure_2" src="https://github.com/user-attachments/assets/e64da211-2270-4c59-b07c-d3f6cf5795f9" />
 
 
