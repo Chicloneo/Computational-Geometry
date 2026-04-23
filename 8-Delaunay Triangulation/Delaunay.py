@@ -1,12 +1,3 @@
-"""PRACTICA 8: 18-03-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p8.py)
-- Trabaja en la función triangula_delaunay_bruta (línea 112)
-- En la parte central del código hay varios algoritmos del cálculo de envolventes convexas
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-"""
-
 import random
 import math
 import numpy as np
