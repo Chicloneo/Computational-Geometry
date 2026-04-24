@@ -1,18 +1,10 @@
-"""PRACTICA 9: 25-03-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p9.py)
-- Trabaja en la función arregla (línea 184)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-"""
-
 import random
 import math
 import numpy as np
 import matplotlib.pyplot as plt
 ERROR = 1e-9
 
-from libreria_gcom_p9 import *
+from Aux import *
 
 
 def triangulacion_delaunay_bruta(puntos): #algoritmo O(n^4) que devuelve una triangulación de Delaunay
