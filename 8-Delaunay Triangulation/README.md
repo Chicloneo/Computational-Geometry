@@ -35,6 +35,8 @@ for punto-a in lista_puntos:
 return all good-triangles
 ```
 
+The boundary edges match the convex hull defined on previous projects.
+
 ## Code
 
 Full code is at the end. First attempt:
