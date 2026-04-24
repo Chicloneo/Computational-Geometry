@@ -1,10 +1,3 @@
-"""LIBRERÍA DE GCOM
-
-Este archivo contiene:
-- las clases Punto, Arista, Cara y DCEL (línea 69)
-- algunas de las funciones implementadas durante el curso (a partir de la línea 400 aprox.)
-"""
-
 import numpy as np
 import random
 import math
