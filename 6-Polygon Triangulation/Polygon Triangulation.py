@@ -1,13 +1,3 @@
-"""PRACTICA 6: 04-03-2026
-Instrucciones:
-- Modifica el nombre de archivo para que comience por tus apellidos (ej. HernandezCorbato_p6.py)
-- Trabaja en la función triangula_polígono (línea 93)
-- Para comprobar su funcionamiento ve al final del código y ejecuta la comprobación correspondiente
-- Sube el código .py a la tarea del CV al final de la clase
-"""
-
-#No hice nada debido a la realización de la práctica de la envolvente
-
 import random
 import math
 import numpy as np
